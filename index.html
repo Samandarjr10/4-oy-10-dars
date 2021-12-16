@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <title>JavaSCript</title>
+</head>
+<body>
+    <header class="pt-2 bg-info">
+        <div class="container">
+            <h1 class="text-danger text-center mb-3">Movies table</h1>
+            <div class="row">
+                <div class="col">
+                    <form id="form_submit" method="post">
+                        <input class="form-control mb-3" type="text" name="input_title" placeholder="film nomini kiriting" id="input_title">
+                        <button class="btn btn-outline-danger text-warning" type="submit">Qidirish</button>
+                    </form>
+                </div>
+                <div class="col-8">
+                    <h2 id="search_result"></h2>
+                    <ul class="d-flex m-0 p-0 flex-wrap justify-content-between" id="movie_list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <template id="movie_item_template">
+        <li class="card border-primary me-2 mb-3 pb-2" style="width: 22rem;">
+            <img class="card-img-top" src="" height="250" alt="moies picture" id="movie_img">
+            <h4 class="ms-2 card-title fw-bolder text-info" id="movie_heading"></h4>
+            <p class="fs-4 ms-2 text-danger" id="movie_year"></p>
+            <p class="fst-italic ms-2 text-warning" id="movie_imdbid"></p>
+        </li>
+    </template>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/movies.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
